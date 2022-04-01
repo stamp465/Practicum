@@ -167,7 +167,19 @@ while True:
                 #print(face_names)
             process_this_frame = not process_this_frame
 
-        # Display the results
+        
+
+    except Exception as err:
+        print(err)
+        print("ERROR !!!!!!!!!!!!!!!!!!!!!!")
+        devices = find_mcu_boards()
+        mcu = McuBoard(devices[0])
+        peri = PeriBoard(mcu)
+
+
+    
+'''
+# Display the results
         for (top, right, bottom, left), name in zip(face_locations, face_names):
             # Scale back up face locations since the frame we detected in was scaled to 1/4 size
             top *= 4
@@ -189,16 +201,7 @@ while True:
         # Hit 'q' on the keyboard to quit!
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
-    except :
-        print("ERROR !!!!!!!!!!!!!!!!!!!!!!")
-        devices = find_mcu_boards()
-        mcu = McuBoard(devices[0])
-        peri = PeriBoard(mcu)
-
-
-    
-
+'''
     
 
 
