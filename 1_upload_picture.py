@@ -62,7 +62,7 @@ def save_file():
     messagebox.showinfo("แสดงผลลัพธ์","อัพโหลดรูปภาพสำเร็จ")
 
     x = dt.datetime.now()
-    f = open('1_status.log', 'a')
+    f = open('./log/1_status.log', 'a')
     f.write(x.strftime("%c")+' ... ')
     f.write(f'upload {name}.jpg to folder {folder}')
     f.write('\n')

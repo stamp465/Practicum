@@ -65,7 +65,7 @@ while True:
         # 2 == door opened
         if start_tt[0] == 2 :
 
-            output_file = open('1_status.txt', 'w')
+            output_file = open('./log/1_status.txt', 'w')
             output_file.write("2")
             output_file.close()
 
@@ -79,7 +79,7 @@ while True:
         # 1 == check pass
         if start_tt[0] == 1 :
             
-            output_file = open('1_status.txt', 'w')
+            output_file = open('./log/1_status.txt', 'w')
             output_file.write("1")
             output_file.close()
 
@@ -100,7 +100,7 @@ while True:
                     mcu.usb_write(3, value=1)
 
                     x = dt.datetime.now()
-                    f = open('1_status.log', 'a')
+                    f = open('./log/1_status.log', 'a')
                     f.write(x.strftime("%c")+' ... ')
                     f.write("password TRUE, door open for a while")
                     f.write('\n')
@@ -112,7 +112,7 @@ while True:
                     mcu.usb_write(3, value=0)
 
                     x = dt.datetime.now()
-                    f = open('1_status.log', 'a')
+                    f = open('./log/1_status.log', 'a')
                     f.write(x.strftime("%c")+' ... ')
                     f.write("password FALSE")
                     f.write('\n')
@@ -126,7 +126,7 @@ while True:
         # 0 == check face
         if start_tt[0] == 0 :
 
-            output_file = open('1_status.txt', 'w')
+            output_file = open('./log/1_status.txt', 'w')
             output_file.write("0")
             output_file.close()
 
@@ -181,7 +181,7 @@ while True:
                     mcu.usb_write(1, value=1)         # set start
 
                     x = dt.datetime.now()
-                    f = open('1_status.log', 'a')
+                    f = open('./log/1_status.log', 'a')
                     f.write(x.strftime("%c")+' ... ')
                     f.write("check face complete by "+str_face)
                     f.write('\n')
