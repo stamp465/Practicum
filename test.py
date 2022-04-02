@@ -1,5 +1,8 @@
-import os
+import datetime as dt
 
-working_directory = os.getcwd()
-print(os.listdir(working_directory+'/Can_Pass'))
-print(os.listdir(working_directory+'/Can_not_Pass'))
+x = dt.datetime.now()
+print(x.strftime("%c"))
+
+f = open('1_status.log', 'a')
+f.write(x.strftime("%c")+'\n')
+f.close()

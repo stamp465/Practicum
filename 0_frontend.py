@@ -4,6 +4,8 @@ from turtle import delay
 from PIL import Image, ImageTk
 import cv2
 
+import datetime as dt
+
 pre_save = '0'
 
 wn = Tk()
@@ -59,9 +61,21 @@ def scan_face():
         if pre_save == '1' :
             ent1.config(text="")
             ent1.config(text="รอรหัสผ่านนานเกินไป แสกนใบหน้าใหม่")
+            x = dt.datetime.now()
+            f = open('1_status.log', 'a')
+            f.write(x.strftime("%c")+' ... ')
+            f.write("too long for waiting password, reset to scan face")
+            f.write('\n')
+            f.close()
         elif pre_save == '2' :
             ent1.config(text="")
             ent1.config(text="ประตูปิดแล้ว แสกนใบหน้าใหม่")
+            x = dt.datetime.now()
+            f = open('1_status.log', 'a')
+            f.write(x.strftime("%c")+' ... ')
+            f.write("door close, reset to scan face")
+            f.write('\n')
+            f.close()
         else :
             ent1.config(text="")
             ent1.config(text="รอแสกนใบหน้า")

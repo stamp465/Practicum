@@ -3,6 +3,8 @@ from tkinter import filedialog
 from tkinter import messagebox
 from PIL import Image, ImageTk
 
+import datetime as dt
+
 wn = Tk()
 wn.geometry("800x600")
 wn.resizable(0,0)
@@ -58,9 +60,18 @@ def save_file():
     #print(name,folder)
     im.save(f"./{folder}/{name}.jpg", 'JPEG')
     messagebox.showinfo("แสดงผลลัพธ์","อัพโหลดรูปภาพสำเร็จ")
+
+    x = dt.datetime.now()
+    f = open('1_status.log', 'a')
+    f.write(x.strftime("%c")+' ... ')
+    f.write(f'upload {name}.jpg to folder {folder}')
+    f.write('\n')
+    f.close()
+
     strvar1.set("")
     strvar2.set(value=0)
     bt2.destroy()
+
     
  
 

@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import time
 import os
-
+import datetime as dt
 
 from practicum import find_mcu_boards, McuBoard, PeriBoard
 devices = find_mcu_boards()
@@ -98,10 +98,25 @@ while True:
                 elif read_hardware_password == "3579" :
                     print("Is TRUE")
                     mcu.usb_write(3, value=1)
+
+                    x = dt.datetime.now()
+                    f = open('1_status.log', 'a')
+                    f.write(x.strftime("%c")+' ... ')
+                    f.write("password TRUE, door open for a while")
+                    f.write('\n')
+                    f.close()
+
                     # break
                 else :
                     print("Is False")
                     mcu.usb_write(3, value=0)
+
+                    x = dt.datetime.now()
+                    f = open('1_status.log', 'a')
+                    f.write(x.strftime("%c")+' ... ')
+                    f.write("password FALSE")
+                    f.write('\n')
+                    f.close()
 
             else:
                 mcu.usb_write(1, value=0)         # set end        
@@ -151,8 +166,11 @@ while True:
 
                 #check face_names in pass_face_name
                 check_face = False
+                str_face = ''
                 for i in face_names :
                     if i in pass_face_name :
+                        str_face += str(i)
+                        str_face += ", "
                         check_face = True
 
                 if check_face :
@@ -161,6 +179,13 @@ while True:
                     # peri.set_led(1,1)
 
                     mcu.usb_write(1, value=1)         # set start
+
+                    x = dt.datetime.now()
+                    f = open('1_status.log', 'a')
+                    f.write(x.strftime("%c")+' ... ')
+                    f.write("check face complete by "+str_face)
+                    f.write('\n')
+                    f.close()
 
                     start_time = time.time()
                     
