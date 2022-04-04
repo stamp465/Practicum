@@ -42,34 +42,14 @@ main
 │   0_backend.py : โปรแกรมสำหรับการ detect ใบหน้า, ควบคุมการแสดงผล, ควบคุมการเปิดปิดประตู
 ```
 ## รายการไลบรารี/เฟรมเวิร์คที่ใช้ :
-### Backend - 
-<ol>
-  <li>face_recognition</li>
-  <li>cv2</li>
-  <li>numpy</li>
-  <li>time></li>
-  <li>os</li>
-  <li>datetime</li>
-</ol>
+### Hardware - 
+usbdrv.h, Wire.h, Servo.h, LiquidCrystal_I2C.h  
 
 ### Frontend - 
-<ol>
-  <li>logging</li>
-  <li>tkinter</li>
-  <li>turtle</li>
-  <li>PIL</li>
-  <li>cv2</li>
-  <li>datetime</li>
-</ol>
+logging, tkinter, datetime, turtle, cv2, PIL  
 
-### Hardware - 
-<ol>
-  <li>usbdrv.h</li>
-  <li>Wire.h</li>
-  <li>Servo.h</li>
-  <li>LiquidCrystal_I2C.h</li>
-</ol>
-
+### Backend - 
+face_recognition, cv2, numpy, time, os, datetime  
 
 ## รายการอุปกรณ์ฮาร์ดแวร์ที่ใช้ :
 <ul>
