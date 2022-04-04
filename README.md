@@ -23,7 +23,7 @@ main
 │   practicum.py : การส่งค่าระหว่าง backend กับ hardware
 │
 └───face_recognition
-│   │   blink.ino : โปรกรมสำหรับการควบคุม Hardware ทุกอย่าง
+│   │   blink.ino : โปรแกรมสำหรับการควบคุม Hardware ทุกอย่าง
 │
 ```
 ### Frontend  
@@ -47,6 +47,8 @@ main
 │   
 │   0_backend.py : โปรแกรมสำหรับการ detect ใบหน้า, ควบคุมการแสดงผล, ควบคุมการเปิดปิดประตู
 ```
+ในการใช้งานจำเป็นที่จะต้องให้โปรแกรมทั้งหมด อยู่ภายใต้ folder เดียวกัน
+
 ## รายการไลบรารีและเฟรมเวิร์คที่ใช้
 ### Hardware 
 `usbdrv.h` `Wire.h` `Servo.h` `LiquidCrystal_I2C.h`  
