@@ -1,7 +1,7 @@
 # ชื่อโครงงาน : ที่ใส่รหัสผ่านเพื่อปลดล็อกประตูนิรภัย
 โครงงานนี้เป็นส่วนหนึ่งของรายวิชา 01204223 Practicum for Computer Engineering ภาคปลาย ปีการศึกษา 2564 หมู่ 11,12
 
-### สมาชิกผู้จัดทำ:  
+## สมาชิกผู้จัดทำ:  
 > :shipit:นิสิตภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน:shipit:  
 
 6310500325 ปองภพ ไกรรวีโรจ<br>
@@ -9,8 +9,14 @@
 6310500350 วิชญ์นพัฒน์ จำปาเรือง<br>
 6310500287 ตะวันฉาย ฉัตรกุล ณ อยุธยา<br>
 
+## Table of contents    
+  - [รายละเอียดไฟล์ Source Code](#รายละเอียดไฟล์-source-code)
+  - [รายการไลบรารีและเฟรมเวิร์คที่ใช้](#รายการไลบรารี/เฟรมเวิร์คที่ใช้)
 
-## รายละเอียดไฟล์ Source Code :  
+  - [รายการอุปกรณ์ฮาร์ดแวร์ที่ใช้](#รายการอุปกรณ์ฮาร์ดแวร์ที่ใช้)
+
+
+## รายละเอียดไฟล์ Source Code
 ### Hardware   
 ```
 main
@@ -41,17 +47,17 @@ main
 │   
 │   0_backend.py : โปรแกรมสำหรับการ detect ใบหน้า, ควบคุมการแสดงผล, ควบคุมการเปิดปิดประตู
 ```
-## รายการไลบรารี/เฟรมเวิร์คที่ใช้ :
-### Hardware - 
-usbdrv.h, Wire.h, Servo.h, LiquidCrystal_I2C.h  
+## รายการไลบรารีและเฟรมเวิร์คที่ใช้
+### Hardware 
+`usbdrv.h` `Wire.h` `Servo.h` `LiquidCrystal_I2C.h`  
 
-### Frontend - 
-logging, tkinter, datetime, turtle, cv2, PIL  
+### Frontend 
+`logging` `tkinter` `datetime` `turtle` `cv2` `PIL`  
 
-### Backend - 
-face_recognition, cv2, numpy, time, os, datetime  
+### Backend 
+`face_recognition` `cv2` `numpy` `time` `os` `datetime` 
 
-## รายการอุปกรณ์ฮาร์ดแวร์ที่ใช้ :
+## รายการอุปกรณ์ฮาร์ดแวร์ที่ใช้
 <ul>
   <li>Board NodeMCU - ATmega328p (Practicum Board v3.2 CPE. KU 2020-11) 2 ตัว</li>
   <li>Peripheral board (PRACTICUM PROTOBOARD CPE. KU) 3 ชิ้น</li>
